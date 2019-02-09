@@ -1,6 +1,16 @@
 package com.nur.springdemo;
 
+import com.nur.springdemo.didemo.interfaces.IFortuneService;
+
 public class TrackCoach implements Coach {
+
+	private IFortuneService fortuneService;
+	
+	
+	public TrackCoach(IFortuneService fortuneService) {
+		super();
+		this.fortuneService = fortuneService;
+	}
 
 	@Override
 	public String getDailyWorkOut() {
@@ -11,7 +21,7 @@ public class TrackCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Just Do It :" + fortuneService.getFortune();
 	}
 
 }
