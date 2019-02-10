@@ -24,6 +24,10 @@
     
     <bean id="myCricketCoach" class="com.nur.springdemo.CricketCoach">
     	<property name="service" ref="myFortune"></property>
+    	
+    	<!-- Inject literal value  -->
+    	<property name="emailAddress" value="myCricketCoach@gmail.com" />
+    	<property name="team" value="IT BA BTA Team" />
     </bean>
     
 </beans>
